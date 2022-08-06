@@ -14,3 +14,36 @@ body {
   overflow: hidden;
   margin: 0;
 }
+
+button {
+  background-color: purple;
+  color: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid purple;
+  margin: 10px 0;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.6);
+}
+
+button:focus {
+  outline: none;
+}
+
+button .circle {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  position: absolute;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: scale 0.5s ease-out;
+}
+
+@keyframes scale {
+  to {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
+}
